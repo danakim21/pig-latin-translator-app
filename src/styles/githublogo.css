@@ -1,0 +1,34 @@
+/* Github Logo */
+
+.github-logo-svg {
+  fill: #5f6c7b;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  border: 0;
+  left: 0;
+  transform: scale(-1, 1);
+}
+
+.github-logo-128 {
+  transform-origin: 130px 106px;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
