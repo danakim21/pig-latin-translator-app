@@ -1,0 +1,17 @@
+#about1 {
+  background-color: #d9d4e7;
+  height: 450px;
+}
+
+#about1 h1 {
+  color: #0e172c;
+  text-align: center;
+  padding-top: 5%;
+  margin-bottom: 4%;
+}
+
+#about1 #about1-des {
+  margin: auto;
+  width: 900px;
+  line-height: 2.5em;
+}
