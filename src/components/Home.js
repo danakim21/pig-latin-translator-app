@@ -1,20 +1,26 @@
 import React from "react";
 import Navigation from "./Navigation.js";
 import "../styles/home.css";
-// import { MuuriComponent, useDrag } from "muuri-react";
-import Dictionary from "./Dictionary.js";
-import Fade from "react-reveal/Fade";
+// import Dictionary from "./Dictionary.js";
+// import Fade from "react-reveal/Fade";
+import { MuuriComponent } from "muuri-react";
+import "../styles/dictionary.css";
 
-function toPigLatin(word) {
-  let first_char = word[0];
-  let pig_latin;
-  let VOWELS = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-  if (VOWELS.includes(first_char)) {
-    pig_latin = word + "way";
-  } else {
-    pig_latin = startsWithConsonant(word);
+function toPigLatin(input) {
+  let output = [];
+  let split = input.split(" ");
+  for (let word of split) {
+    let first_char = word[0];
+    let pig_latin;
+    let VOWELS = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+    if (VOWELS.includes(first_char)) {
+      pig_latin = word + "way";
+    } else {
+      pig_latin = startsWithConsonant(word);
+    }
+    output.push(pig_latin);
   }
-  return pig_latin;
+  return output.join(" ");
 }
 
 function startsWithConsonant(word) {
@@ -31,9 +37,12 @@ class Home extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    let inputWord = this.state.currentWord;
-    let output = toPigLatin(inputWord);
-    this.setState({ outputWord: output });
+    let inputWord = this.state.currentWord.trim();
+    console.log(inputWord);
+    if (inputWord !== "") {
+      let output = toPigLatin(inputWord);
+      this.setState({ outputWord: output });
+    }
   };
 
   handleInputChange = (e) => {
@@ -51,15 +60,39 @@ class Home extends React.Component {
     el[dict.length] = [this.state.currentWord, this.state.outputWord];
     dict.push(el);
     localStorage.setItem("myDict", JSON.stringify(dict));
+    window.location.reload(false);
   };
 
   componentDidMount() {
     if (!localStorage.getItem("myDict")) {
-      localStorage.setItem("myDict", JSON.stringify([{ 0: ["cat", "atcay"] }]));
+      localStorage.setItem("myDict", JSON.stringify([]));
     }
   }
 
   render() {
+    let dict = JSON.parse(localStorage.getItem("myDict"));
+    let dictRender;
+
+    if (!dict || !dict.length) {
+      dictRender = (
+        <div className="item">
+          <div className="item-content">
+            Please add<br></br>a new word
+          </div>
+        </div>
+      );
+    } else {
+      dictRender = dict.map((word, i) => (
+        <div className="item" key={i}>
+          <div className="item-content">
+            {word[i][0]}
+            <br></br>
+            {word[i][1]}
+          </div>
+        </div>
+      ));
+    }
+
     return (
       <>
         <Navigation pageNumber={1} />
@@ -93,7 +126,16 @@ class Home extends React.Component {
             <button onClick={this.handleClear}>CLEAR</button>
           </div>
         </div>
-        <Dictionary />
+        {/* <Dictionary /> */}
+        <div id="homeDictionary">
+          <h2>My Dictionary</h2>
+          <p>
+            <i>Move the following cards to any order you want</i>
+          </p>
+          <div id="homeDictionarySmall">
+            <MuuriComponent dragEnabled>{dictRender}</MuuriComponent>
+          </div>
+        </div>
       </>
     );
   }

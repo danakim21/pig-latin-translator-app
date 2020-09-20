@@ -12,6 +12,16 @@
 
 #about1 #about1-des {
   margin: auto;
-  width: 900px;
+  width: 870px;
   line-height: 2.5em;
+}
+
+#about2 {
+  margin-bottom: 10%;
+}
+
+#about2 h2 {
+  text-align: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
