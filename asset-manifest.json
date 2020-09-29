@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/pig-latin-translator-app/static/css/main.2e33a140.chunk.css",
+    "main.js": "/pig-latin-translator-app/static/js/main.f59324ce.chunk.js",
+    "main.js.map": "/pig-latin-translator-app/static/js/main.f59324ce.chunk.js.map",
+    "runtime-main.js": "/pig-latin-translator-app/static/js/runtime-main.44f0a68f.js",
+    "runtime-main.js.map": "/pig-latin-translator-app/static/js/runtime-main.44f0a68f.js.map",
+    "static/js/2.159c9a27.chunk.js": "/pig-latin-translator-app/static/js/2.159c9a27.chunk.js",
+    "static/js/2.159c9a27.chunk.js.map": "/pig-latin-translator-app/static/js/2.159c9a27.chunk.js.map",
+    "index.html": "/pig-latin-translator-app/index.html",
+    "precache-manifest.4eb5f976786d8c0cafbcba9df82d63b4.js": "/pig-latin-translator-app/precache-manifest.4eb5f976786d8c0cafbcba9df82d63b4.js",
+    "service-worker.js": "/pig-latin-translator-app/service-worker.js",
+    "static/css/main.2e33a140.chunk.css.map": "/pig-latin-translator-app/static/css/main.2e33a140.chunk.css.map",
+    "static/js/2.159c9a27.chunk.js.LICENSE.txt": "/pig-latin-translator-app/static/js/2.159c9a27.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/pig-latin-translator-app/static/media/Lato-Black.e631d273.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44f0a68f.js",
+    "static/js/2.159c9a27.chunk.js",
+    "static/css/main.2e33a140.chunk.css",
+    "static/js/main.f59324ce.chunk.js"
+  ]
+}
