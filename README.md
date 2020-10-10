@@ -53,7 +53,7 @@ Languages, Libraries, Versions (ex. Python 2.7)
 
 ## Demo
 
-Here is a working live demo: [link](https://danakim21.github.io/pig-latin-translator-app/#/)
+Here is a working [live demo](https://danakim21.github.io/pig-latin-translator-app/#/)
 
 ## Setup
 
