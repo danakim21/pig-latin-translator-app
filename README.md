@@ -57,7 +57,7 @@ Here is a working live demo: [link](https://danakim21.github.io/pig-latin-transl
 
 ## Setup
 
-```
+```sh
 # Clone this repository
 $ git clone https://github.com/danakim21/pig-latin-translator-app.git
 
