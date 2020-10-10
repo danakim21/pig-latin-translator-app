@@ -77,8 +77,8 @@ List of features ready
 
 - Converts any word or sentences to Pig Latin
 - Save word set to my dictionary -- Cards are placed in created date
-- Save my dictionary to local storage -- Words still exist if page is reloaded
-- Move different set of cards as the user wants
+- Save my dictionary to local storage -- Words still exist if the page is reloaded
+- Able to move the cards as the user wants
 
 To Do
 
