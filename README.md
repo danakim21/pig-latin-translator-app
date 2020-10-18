@@ -45,8 +45,6 @@ Pig Latin Translator App is a continued project from my past project, [Pig Latin
 
 ## Technologies
 
-Languages, Libraries, Versions (ex. Python 2.7)
-
 - React.js
 - [muuri-react](https://github.com/Paol-imi/muuri-react) package
 - [react-github-corner](https://github.com/skratchdot/react-github-corner) package
